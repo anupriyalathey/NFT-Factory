@@ -2,5 +2,9 @@
 pragma solidity ^0.8.0;
 
 contract HelloWorld {
-    string public constant hello = "world";
+    string public hello;
+
+    constructor(string memory _hello) {
+        hello = _hello;
+    }
 }

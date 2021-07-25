@@ -25,15 +25,9 @@ describe("Hello World", () => {
     [deployer] = await ethers.getSigners();
 
     // deploy contracts
-    helloWorld = await ethers
-      .getContractFactory(
-        HelloWorldArtifact.abi,
-        HelloWorldArtifact.bytecode,
-        deployer
-      )
-      .then(async (factory) => {
-        return (await factory.deploy()) as HelloWorld;
-      });
+    helloWorld = (await deployContract(deployer, HelloWorldArtifact, [
+      "world",
+    ])) as HelloWorld;
   });
 
   it("should return correct string", async () => {
