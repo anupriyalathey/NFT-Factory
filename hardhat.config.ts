@@ -8,6 +8,7 @@ import "@nomiclabs/hardhat-waffle";
 import "hardhat-deploy";
 import "hardhat-deploy-ethers";
 import "hardhat-abi-exporter";
+import "hardhat-tracer";
 
 const config: HardhatUserConfig = {
   solidity: {

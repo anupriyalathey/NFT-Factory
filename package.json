@@ -6,6 +6,7 @@
     "clean": "hardhat clean",
     "compile": "hardhat compile",
     "test": "hardhat test",
+    "test:logs": "hardhat test --logs",
     "deploy:default": "hardhat deploy",
     "deploy:polygon": "hardhat deploy --network polygon",
     "etherscan-verify:polygon": "hardhat --network polygon etherscan-verify"
@@ -26,6 +27,7 @@
     "hardhat-abi-exporter": "^2.2.1",
     "hardhat-deploy": "^0.8.9",
     "hardhat-deploy-ethers": "^0.3.0-beta.10",
+    "hardhat-tracer": "^1.0.0-alpha.6",
     "ts-node": "^10.0.0",
     "typechain": "^5.1.1"
   }

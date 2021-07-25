@@ -7,6 +7,7 @@ Quickly setup your next project! This boilerplate includes:
 - etherscan-verify
 - openzeppelin contracts
 - waffle
+- hardhat-tracer
 - mocha
 - chai
 
