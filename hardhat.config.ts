@@ -11,15 +11,6 @@ import "hardhat-abi-exporter";
 import "hardhat-tracer";
 import "@tenderly/hardhat-tenderly";
 
-import { task } from "hardhat/config";
-task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners();
-  const account = accounts[1];
-  const balance = await account.getBalance();
-
-  console.log({ account: account.address, balance: balance.toString() });
-});
-
 const config: HardhatUserConfig = {
   solidity: {
     version: "0.8.6",
