@@ -9,6 +9,16 @@ import "hardhat-deploy";
 import "hardhat-deploy-ethers";
 import "hardhat-abi-exporter";
 import "hardhat-tracer";
+import "@tenderly/hardhat-tenderly";
+
+import { task } from "hardhat/config";
+task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
+  const accounts = await hre.ethers.getSigners();
+  const account = accounts[1];
+  const balance = await account.getBalance();
+
+  console.log({ account: account.address, balance: balance.toString() });
+});
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -23,8 +33,11 @@ const config: HardhatUserConfig = {
   namedAccounts: {
     deployer: 0,
   },
-  defaultNetwork: "hardhat",
+  defaultNetwork: "local",
   networks: {
+    local: {
+      url: "http://127.0.0.1:8545",
+    },
     hardhat: {
       forking: {
         url: process.env.POLYGON_NODE_URL!,
@@ -37,6 +50,10 @@ const config: HardhatUserConfig = {
   },
   mocha: {
     timeout: 200000,
+  },
+  tenderly: {
+    username: process.env.TENDERLY_USERNAME!,
+    project: process.env.TENDERLY_PROJECT!,
   },
 };
 

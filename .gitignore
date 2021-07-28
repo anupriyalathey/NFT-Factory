@@ -11,3 +11,6 @@ typechain
 # Graph protocol
 generated
 build
+
+# tenderly
+tenderly.yaml
