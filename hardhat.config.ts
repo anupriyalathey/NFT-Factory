@@ -9,7 +9,6 @@ import "hardhat-deploy";
 import "hardhat-deploy-ethers";
 import "hardhat-abi-exporter";
 import "hardhat-tracer";
-import "@tenderly/hardhat-tenderly";
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -41,10 +40,6 @@ const config: HardhatUserConfig = {
   },
   mocha: {
     timeout: 200000,
-  },
-  tenderly: {
-    username: process.env.TENDERLY_USERNAME!,
-    project: process.env.TENDERLY_PROJECT!,
   },
 };
 

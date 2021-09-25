@@ -37,17 +37,3 @@ Quickly setup your next project! This boilerplate includes:
 5. Verify deployed contracts on Etherscan (Polygonscan)
 
    `yarn etherscan-verify:polygon`
-
-6. To debug on Tenderly:
-
-   a) One-time set up  
-   `tenderly export init --project projectName --rpc 127.0.0.1:8545`  
-   Note: Multiple settings can be set as well by creating a `tenderly.yaml`
-
-   b) Run local hardhat node  
-   `npx hardhat node`  
-   Note: Forking can be enabled here (if required)
-
-   c) Export txn to Tenderly  
-   `tenderly export txnHash`  
-   A Tenderly link would be generated in the terminal.
