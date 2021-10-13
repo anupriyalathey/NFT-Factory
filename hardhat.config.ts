@@ -23,15 +23,15 @@ const config: HardhatUserConfig = {
   namedAccounts: {
     deployer: 0,
   },
-  defaultNetwork: "local",
+  defaultNetwork: "hardhat",
   networks: {
     local: {
       url: "http://127.0.0.1:8545",
     },
     hardhat: {
-      forking: {
-        url: process.env.POLYGON_NODE_URL!,
-      },
+      // forking: {
+      //   url: process.env.POLYGON_NODE_URL!,
+      // },
     },
     polygon: {
       url: process.env.POLYGON_NODE_URL!,
