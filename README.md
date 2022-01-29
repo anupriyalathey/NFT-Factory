@@ -37,4 +37,4 @@ Quickly setup your next project! This boilerplate includes:
 
 5. Verify deployed contracts on Etherscan (Polygonscan)
 
-   `yarn etherscan-verify:polygon`
+   `yarn verify:polygon`

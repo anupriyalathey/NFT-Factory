@@ -9,7 +9,7 @@
     "test:logs": "hardhat test --logs",
     "deploy:default": "hardhat deploy",
     "deploy:polygon": "hardhat deploy --network polygon",
-    "etherscan-verify:polygon": "hardhat --network polygon etherscan-verify"
+    "verify:polygon": "hardhat --network polygon etherscan-verify"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.3.2"
